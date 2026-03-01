@@ -95,3 +95,53 @@ button:hover {
   font-family: monospace;
   margin-top: 10px;
 }
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .editor-section {
+    border-right: none;
+    border-bottom: 2px solid #333;
+    height: 50vh;
+  }
+
+  .output-section {
+    height: 50vh;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .controls {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  select,
+  button {
+    flex: 1;
+    min-width: 120px;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .editor-section,
+  .output-section {
+    height: 50vh;
+  }
+}

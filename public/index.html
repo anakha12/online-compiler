@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Online Compiler</title>
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="https://unpkg.com/monaco-editor@0.34.1/min/vs/loader.js"></script>
+</head>
+<body>
+
+<header>
+  <h2>🚀 Online Multi-Language Compiler</h2>
+
+  <div class="controls">
+    <select id="language" onchange="changeLanguage()">
+      <option value="63" data-lang="javascript">JavaScript</option>
+      <option value="71" data-lang="python">Python</option>
+      <option value="54" data-lang="cpp">C++</option>
+      <option value="62" data-lang="java">Java</option>
+      <option value="50" data-lang="c">C</option>
+      <option value="72" data-lang="ruby">Ruby</option>
+      <option value="60" data-lang="go">Go</option>
+      <option value="73" data-lang="rust">Rust</option>
+    </select>
+
+    <button id="suggestBtn" onclick="toggleSuggestions()">
+      Auto Suggest: <span id="suggestStatus">ON</span>
+    </button>
+
+    <button class="run-btn" onclick="runCode()">▶ Run</button>
+    <button class="refresh-btn" onclick="refreshAll()">⟳ Refresh</button>
+  </div>
+</header>
+
+<div class="container">
+  <div class="editor-section">
+    <div id="editor"></div>
+  </div>
+
+  <div class="output-section">
+    <div class="output-header">
+      <h3>Output</h3>
+    </div>
+    <pre id="output">Click Run to execute code...</pre>
+  </div>
+</div>
+
+<script src="js/editor.js"></script>
+
+</body>
+</html>

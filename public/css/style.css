@@ -1,0 +1,97 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #1e1e1e;
+  color: white;
+}
+
+header {
+  padding: 15px 20px;
+  background: #111;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #333;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+select {
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+  background: #2d2d2d;
+  color: white;
+}
+
+button {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* Special Buttons */
+.run-btn {
+  background: #00c853;
+  color: white;
+}
+
+.refresh-btn {
+  background: #ff5252;
+  color: white;
+}
+
+#suggestBtn {
+  background: #007acc;
+  color: white;
+}
+
+#suggestBtn.off {
+  background: #555;
+}
+
+/* Layout */
+.container {
+  display: flex;
+  height: calc(100vh - 70px);
+}
+
+.editor-section {
+  flex: 1;
+  border-right: 2px solid #333;
+}
+
+.output-section {
+  flex: 1;
+  background: #111;
+  padding: 15px;
+  overflow-y: auto;
+}
+
+.output-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#editor {
+  height: 100%;
+}
+
+#output {
+  white-space: pre-wrap;
+  font-family: monospace;
+  margin-top: 10px;
+}
